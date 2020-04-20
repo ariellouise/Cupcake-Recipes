@@ -1,8 +1,6 @@
 # Cupcake::Recipes::CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Cupcake/Recipes/CLI`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my project. The purpose of this application is to be able to quickly pull up a list of cupcake recipes from Tasty.co and then select a recipe to see the details of it. This is just a standard and quick application to show you one of the many ways you can perform a CLI in Ruby for the Ruby final project assigned by Flatiron.
 
 ## Installation
 
