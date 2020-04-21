@@ -39,3 +39,9 @@ class CupcakeRecipe
   def print
    self.get_complete_recipe
    puts "\n(self.name)"
+   puts "\nIngredients:"
+  self.ingredients.each do |ingredient|
+    puts clean_ingredient(ingredient)
+  end
+  puts "\nInstructions:"
+  self.instructions.each_with_index do |instruction, index|
