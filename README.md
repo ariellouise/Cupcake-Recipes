@@ -1,4 +1,4 @@
-# Cupcake::Recipes::CLI
+# Cupcake Recipes 
 
 Welcome to my project. The purpose of this application is to be able to quickly pull up a list of cupcake recipes from Tasty.co and then select a recipe to see the details of it. This is just a standard and quick application to show you one of the many ways you can perform a CLI in Ruby for the Ruby final project assigned by Flatiron.
 
@@ -7,7 +7,7 @@ Welcome to my project. The purpose of this application is to be able to quickly 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Cupcake-Recipes-CLI'
+gem 'Cupcake-Recipes'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Cupcake-Recipes-CLI
+    $ gem install Cupcake-Recipes
 
 ## Usage
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'daring-sequence-4549'/Cupcake-Recipes-CLI. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/'daring-sequence-4549'/Cupcake-Recipes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -38,4 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Cupcake::Recipes::CLI project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'daring-sequence-4549'/Cupcake-Recipes-CLI/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Cupcake-Recipes project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'daring-sequence-4549'/Cupcake-Recipes/blob/master/CODE_OF_CONDUCT.md).
