@@ -4,12 +4,12 @@ require "Cupcake/Recipes/CLI/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "Cupcake-Recipes-CLI"
-  spec.version       = Cupcake::Recipes::CLI::VERSION
+  spec.version       = Cupcake::Recipes::VERSION
   spec.authors       = ["'ariel murphy'"]
   spec.email         = ["'arielladders@gmail.com'"]
 
   spec.summary       = %q{Application to narrow down Tasty.co website listings to cupcakes and further inspect an individual recipe.}
-  spec.homepage      = "https://github.com/ariellouise/Cupcake-Recipes-CLI"
+  spec.homepage      = "https://github.com/ariellouise/Cupcake-Recipes"
   spec.license       = "MIT"
 
 
