@@ -16,3 +16,14 @@ parsed_cupcakes = Nokogiri::(cupcakes_html)
 cupcake_types = parsed_cupcakes.css("item-title xs-text-4 md-text-3 extra-bold text-gray xs-mb05").map(&:text)
 cupcake_recipes = parsed_cupcakes.css
 
+
+
+class List 
+  def.self.print_all(list)
+  list.each_with_index do |item, index|
+    puts "#{index + 1}. #{item.name}"
+  end
+  
+  def self.display(list)
+    self.print_all(list)
+    input_prompt = "Please type in the number to select a a particular recipe, or type 'exit':"
