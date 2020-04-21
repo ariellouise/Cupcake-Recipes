@@ -1,4 +1,4 @@
-# The scrape/parse
+# The scrape/parse - level 1 and main file
 
 require 'open-uri'
 require 'nokogiri'

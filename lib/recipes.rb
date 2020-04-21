@@ -1,5 +1,5 @@
 
-#the recipes being shown as a recipe
+#the recipes being shown as a recipe - level 2 and child file
 
 class CupcakeRecipes
  attr_accessor :name, :ingredients, :instructions , :url
