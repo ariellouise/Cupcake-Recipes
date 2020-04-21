@@ -1,28 +1,24 @@
-# The scrape/parse - level 1 and main file
+# The   CLI
 
 require 'open-uri'
 require 'nokogiri'
+require 'pry'
 
 
-#base_url = "https://tasty.co"
-#cupcakes_url = base_url + "search?q=cupcakes"
+class Cupcakes::CLI
+    def.self.print_all(list)
+    list.each_with_index do |item, index|
+      puts "#{index + 1}. #{item.name}"
+    end
 
-
-#cupcakes_page = open(cupcakes_url)
-#cupcakes_html =cupcakes_page.read 
-
-#parsed_cupcakes = Nokogiri::(cupcakes_html)
-
-#cupcake_types = parsed_cupcakes.css("item-title xs-text-4 md-text-3 extra-bold text-gray xs-mb05").map(&:text)
-#cupcake_recipes = parsed_cupcakes.css
-
-
-class List 
-  def.self.print_all(list)
-  list.each_with_index do |item, index|
-    puts "#{index + 1}. #{item.name}"
+  def list_recipes
+    @recipes = Recipes::Recipe.all
+    @recipes.each.with_index(1) do |recipe, index|
+      puts "#{index}. #{recipe.name} - #{recipe.description}"
+    end
+    
   end
-  
+
   def self.display(list)
     self.print_all(list)
     input_prompt = "Please type in the number to select a a particular recipe, or type 'exit':"
