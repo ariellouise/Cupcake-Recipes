@@ -1,6 +1,6 @@
 # Cupcake Recipes 
 
-Welcome to my project. The purpose of this application is to be able to quickly pull up a list of cupcake recipes from Tasty.co and then select a recipe to see the details of it. This is just a standard and quick application to show you one of the many ways you can perform a CLI in Ruby for the Ruby final project assigned by Flatiron.
+Welcome to my project. The purpose of this application is to be able to quickly pull up a list of cupcake recipes from Foodnetwork.com and then select a recipe to see the details of it. This is just a standard and quick application to show you one of the many ways you can perform a CLI in Ruby for the Ruby final project assigned by Flatiron.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-The user can pull up a list of cupcake recipes from Tasty.co , and then view a particular recipe from the list.
+The user can pull up a list of cupcake recipes from Foodnetwork.com , and then view a particular recipe from the list.
 
 ## Development
 
