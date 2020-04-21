@@ -9,7 +9,6 @@ module CupcakeRecipes
   recipe.print
 end
 
+require_relative "./cupcake_recipes/cupcakes"
 require_relative "./cupcake_recipes/recipes"
-require_relative "./cupcake_recipes/scraper"
 require_relative "./cupcake_recipes/version"
-require_relative "./cupcake_recipes/cupcake"
