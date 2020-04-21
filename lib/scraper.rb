@@ -12,5 +12,5 @@ cupcakes_html =cupcakes_page.read
 parsed_cupcakes = Nokogiri::(cupcakes_html)
 
 cupcake_types = parsed_cupcakes.css("item-title xs-text-4 md-text-3 extra-bold text-gray xs-mb05").map(&:text)
-
+cupcake_recipes = parsed_cupcakes.css
 

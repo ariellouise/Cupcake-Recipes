@@ -2,7 +2,9 @@ require 'nokogiri'
 require 'open-uri'
 
 module CupcakeRecipes
-  # Your code goes here...
+  list = List.get_list
+  recipe = CupcakeRecipes.get_recipe(list)
+  recipe.print
 end
 
 require_relative "./cupcake_recipes/recipes"
