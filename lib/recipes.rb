@@ -1,3 +1,6 @@
+
+#the recipes being shown as a recipe
+
 class CupcakeRecipes
  attr_accessor :name, :ingredients, :instructions , :url
 

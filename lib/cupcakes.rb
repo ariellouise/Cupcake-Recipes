@@ -1,3 +1,5 @@
+# The scrape/parse
+
 require 'open-uri'
 require 'nokogiri'
 
