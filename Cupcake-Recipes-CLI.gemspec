@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'ariel murphy'"]
   spec.email         = ["'arielladders@gmail.com'"]
 
-  spec.summary       = "An application to narrow down Tasty.co website's listings to cupcakes, and then further inspect an individual recipe."
+  spec.summary       = %q{Application to narrow down Tasty.co website listings to cupcakes and further inspect an individual recipe.}
   spec.homepage      = "https://github.com/ariellouise/Cupcake-Recipes-CLI"
   spec.license       = "MIT"
 
