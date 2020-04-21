@@ -40,8 +40,11 @@ class CupcakeRecipe
    self.get_complete_recipe
    puts "\n(self.name)"
    puts "\nIngredients:"
-  self.ingredients.each do |ingredient|
-    puts clean_ingredient(ingredient)
+   self.ingredients.each do |ingredient|
+     puts clean_ingredient(ingredient)
+   end
+   puts "\nInstructions:"
+   self.instructions.each_with_index do |instruction, index|
+     puts "#{index + 1}. #{instruction}"
+   end 
   end
-  puts "\nInstructions:"
-  self.instructions.each_with_index do |instruction, index|
