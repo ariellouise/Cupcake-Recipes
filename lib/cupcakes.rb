@@ -27,3 +27,15 @@ class List
   def self.display(list)
     self.print_all(list)
     input_prompt = "Please type in the number to select a a particular recipe, or type 'exit':"
+    puts input_prompt
+    input = nil 
+    while input != "exit"
+     input = gets.chomp.downcase
+     if input.to_i > 0 && input.to_i < list.length + 1 
+       index = input.to_i - 1 
+       return index
+      elseif input == "exit"
+        puts "Thank you for using the Cupcake Recipe Application. Goodbye!"
+        exit
+      else 
+        puts 
