@@ -1,9 +1,9 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "Cupcake/Recipes/CLI/version"
+require "Cupcake/Recipes/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "Cupcake-Recipes-CLI"
+  spec.name          = "Cupcake-Recipes"
   spec.version       = Cupcake::Recipes::VERSION
   spec.authors       = ["'ariel murphy'"]
   spec.email         = ["'arielladders@gmail.com'"]
