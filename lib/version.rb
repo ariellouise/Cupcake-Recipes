@@ -1,5 +1,3 @@
-module Cupcake
-  module Recipes
-      VERSION = "0.1.0"
-  end
+module CupcakeRecipes
+  VERSION = "0.1.0"
 end
