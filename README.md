@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The user can pull up a list of cupcake recipes from Tasty.co , and then view a particular recipe from the list.
 
 ## Development
 
