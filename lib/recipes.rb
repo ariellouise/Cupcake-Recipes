@@ -30,8 +30,12 @@ class CupcakeRecipe
    posts = deoc.css(div.tve_post")
    
    posts.each do |post|
-    name =
-    url =
-    recipe = self.new(name, url, ingredients, instructions)
+    name = (item-title xs-text-4 md-text-3 extra-bold text-gray xs-mb05").text
+    url = post.css("a").attr("href").value
+    recipe = self.new(name, url)
    end
   end
+  
+  def print
+   self.get_complete_recipe
+   puts "\n(self.name)"
