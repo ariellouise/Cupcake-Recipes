@@ -25,3 +25,13 @@ class CupcakeRecipe
     recipe_index = Menu.display(self.type, recipes)
   end
     
+  def self.scrape_all_recipes(list)
+   doc = Nokogiri::HTML(open(list.url))
+   posts = deoc.css(div.tve_post")
+   
+   posts.each do |post|
+    name =
+    url =
+    recipe = self.new(name, url, ingredients, instructions)
+   end
+  end
