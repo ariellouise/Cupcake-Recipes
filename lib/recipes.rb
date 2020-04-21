@@ -48,3 +48,20 @@ class CupcakeRecipe
      puts "#{index + 1}. #{instruction}"
    end 
   end
+  
+  def get_complete_recipe
+    doc = Nokogiri::HTML(open(self.url))
+    ingredients_data = doc.css()
+    ingredients_data.each do |ingredient|
+      amount = ingredient.css()
+      unit = ingredient.css()
+      name = ingredient.css()
+      end
+      self.ingredients.push("#{amount} #{unit} #{name}")
+    end
+    
+    instructions_data = doc.css()
+    instructions_data.each do |instructions|
+      self.instructions.push(instruction.text)
+    end
+    
