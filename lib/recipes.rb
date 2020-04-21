@@ -1,40 +1,16 @@
 
 #the recipes being shown as a recipe - level 2 and child file
 
-class CupcakeRecipes
- attr_accessor :name, :ingredients, :instructions , :url
+class CupcakeRecipe
+  @@all = []
+  @@type = "recipe"
 
- @@all = []
+  attr_accessor :name, :url, :ingredients, :instructions
 
-  def initialize()
-   hash.each do |key, value|
-     self.send("#{key}=",value)
-    end
+  def initialize(name, url, category)
+    @name = name
+    @url = url
     @ingredients = []
-    @instructions = instructions
+    @instructions = []
+    self.class.all << self
   end
-  
-  def self.all
-   @@all
-  end
-
- def save
-   self.class.all.push(self)
- end
-
- def self.create()
-   recipe = self.new()
-   recipe.save
-   recipe
- end
-
- def self.create_from_array(array)
-   array.each do ||
-     self.create()
-   end
-  end
-end
-
-
-
-
