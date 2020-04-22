@@ -1,5 +1,9 @@
+
+require 'Nokogiri'
+require 'Open-uri'
+
 #base_url = "https://www.foodnetwork.com"
-#recipes_url = "https://www.foodnetwork.com/recipes"
+#recipes_url = base_url + "recipes/"
 
 class Category
     @@all = []
@@ -11,7 +15,7 @@ class Category
         @name = name
         @url = url
         @recipes = []
-        self.class.all <<self
+        self.class.all << self
     end
 
     def self.all
@@ -29,7 +33,13 @@ class Category
     end
 
     def self.scrape_all_categories
-        main_url = "https://www.foodnetwork.com/"
-        doc = Nokogiri::HTML(open(main_url))
+        recipes_url = "https://www.foodnetwork.com/recipes/"
+        doc = Nokogiri::HTML(open(recipes_url))
+        rows = doc.css("h4").map(&:text)
+        rows.shift
+    end
 
+    def add_recipe(recipe)
+        self.recipes << recipe
+    end
 end
