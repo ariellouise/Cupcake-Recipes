@@ -1,27 +1,37 @@
 
 #the recipes being shown as a recipe - level 2 and child file
 
-class Recipe
-  @@all = []
-  @@type = "recipe"
+class fn_Recipes::Recipe
+  attr_accessor :name, :category, :ingredients, :instructions
 
-  attr_accessor :name, :category, :url, :ingredients, :instructions
+  @@recipes = []
 
-  def initialize(name, category, url)
-    @name = name
-    @category = category
-    @url = url
-    @ingredients = []
-    @instructions = []
-    self.class.all << self
+  def self.scrape_recipes
+
+    doc = Nokogiri::HTML(open("https://foodnetwork.com/recipes/"))
+
+     doc.css("").collect do |dish|
+       name = dish.css("").attribute("title").text
+       category = dish.css("").text
+       ingredients = dish.css("").text
+       instructions = dish.css("").text
+       recipe = self.new(name, category, instructions, ingredients)
+
+    end
   end
-  
+
+  def initialize(name, type, category, instructions, ingredients)
+    @name=name
+    @category = category
+    @instructions = instructions
+    @ingredients = ingredients
+    @@recipes << self
+  end
+
   def self.all
-    @@all
-  end 
-  
-  def self. type
-    @@type
+    @@recipes.each.with_index(1) do |recipe, i|
+      puts " #{i}. #{recipe.name}"
+    end
   end
 
   def self.get_recipe(category)
