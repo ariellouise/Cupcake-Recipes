@@ -24,8 +24,22 @@ ingredients_list = parsed_recipe.css("p.o-Ingredients__a-Ingredient").map(&:text
 instructions_list = parsed_recipe.css("li.o-Method__m-Step").map(&:text)
 
 
+class Category 
+  categories_page = open(category_url)
+  categories_html = categories_page.read
+  parsed_categories = Nokogiri::HTML(categories_html)
+  categories_list = parsed_categories.css("a").map(&:text) 
+  categories_list = categories_list[70, categories_list.length - 113]
+  categories_list.each.with_index(1) do |value, index| puts "#{index}: #{value}" 
+end
 
-class RecipeComponent
+
+
+
+
+
+
+class Recipe
   attr_reader :name, :ingredients, :instructions
 
   def initialize(name, ingredients, instructions)
@@ -49,7 +63,5 @@ class Ingredients <RecipeComponent
 class Instructions <RecipeComponent
 
 
-#class for my recipe
-class Recipe
 
 

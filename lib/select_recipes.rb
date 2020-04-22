@@ -14,5 +14,6 @@ puts parsed_categories.class
 categories_list = parsed_categories.css("a").map(&:text) 
 categories_list = categories_list[70, categories_list.length - 113]
 #puts categories_types.to_s
-#pputs categories_types.length
-puts categories_list.to_s
+#puts categories_types.length
+#puts categories_list.to_s
+end
