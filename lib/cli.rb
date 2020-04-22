@@ -26,21 +26,21 @@ instructions_list = parsed_recipe.css("li.o-Method__m-Step").map(&:text)
 
 
 class RecipeComponent
+  attr_reader :name, :ingredients, :instructions
 
-    @@all = [ ]
+  def initialize(name, ingredients, instructions)
+    @name, @ingredients, @instructions = name, ingredients, instructions
+    @@all << self
+  end
 
-    def self.
+  def to_s
+    "Recipe: #{self.name}. Ingredients: #{self.ingredients.name}. Ingredients: #{self.instructions.name}."
+  end
 
-    def self.
-    end
-    
+  def description
+    puts "#{self}: \n #{self.name}: \n #{self.ingredients.name}: \n #{self.instructions.name}."
+  end
 
-
-attr_reader :name, :ingredients, :instructions
-
-def initialize(name, ingredients, instructions)
-  @name, @ingredients, @instructions = name, ingredients, instructions
-  @@all << self
 end
 
 
