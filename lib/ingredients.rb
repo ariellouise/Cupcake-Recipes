@@ -3,16 +3,15 @@ require 'Nokogiri'
 
 
 base_url = "https://www.foodnetwork.com/recipes/"
-recipes_url = base_url + "a-big-delicious-chocolate-mess-5393121"
+ingredient_url = base_url + "a-big-delicious-chocolate-mess-5393121"
 
-recipes_page = open(recipes_url)
-recipes_html = recipes_page.read
+ingredients_page = open(ingredient_url)
+ingredients_html = ingredients_page.read
 
-parsed_recipes = Nokogiri::HTML(recipes_html)
-puts parsed_recipes.class
-recipes_types = parsed_recipes.css("p.o-Ingredients__a-Ingredient").map(&:text)
-#recipes_descriptions = parsed_recipes.css("a").map(&:text) 
-#recipes_descriptions = recipes_descriptions[70, recipes_descriptions.length - 113]
-puts recipes_types.to_s
-#puts recipes_descriptions.to_s
+parsed_ingredients = Nokogiri::HTML(ingredients_html)
+puts parsed_ingredients.class
+ingredients_list = parsed_ingredients.css("p.o-Ingredients__a-Ingredient").map(&:text)
+
+puts ingredients_list.to_s
+
 
