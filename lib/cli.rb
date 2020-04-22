@@ -1,12 +1,3 @@
-# The   CLI
-
-require 'open-uri'
-require 'nokogiri'
-
-    input_prompt = "Please type in the number to select a a particular recipe, or type 'exit':"
-
-
-
 class FN-Recipes::CLI
   attr_accessor :name, :type, :instructions
 
