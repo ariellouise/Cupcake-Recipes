@@ -15,3 +15,4 @@ recipes_types = parsed_recipes.css("p.o-Ingredients__a-Ingredient").map(&:text)
 #recipes_descriptions = recipes_descriptions[70, recipes_descriptions.length - 113]
 puts recipes_types.to_s
 #puts recipes_descriptions.to_s
+
