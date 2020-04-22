@@ -26,13 +26,27 @@ class FN_Recipes::Recipe
   end
 
   def self.featured_collection
-    @@
-    puts
+    @featured_collection = []
+    @@recipes.each do |recipe|
+      if recipe.type == "Featured Collection"
+        @featured_collection << recipe
+      end
+    end 
+
+    #value_each.with_index(i) do |value, index| puts "#{index}: #{value}" end
+    @featured_collection.each.with_index(1) do |featured_collection, i|
+      puts "#{i}. #{featured_collection.name}"
+      
   end
 
   def self.just_dinner
-    @@
-    puts
+    @just_dinner = []
+    @@recipes.each do |recipe|
+      if recipe.type == "Just Dinner"
+        @just_dinner << recipe
+    
+        @just_dinner.each.with_index(1) do |just_dinner, i|
+          puts "#{i}. #{featured_collection.name}"
   end
 
   def self.from_the_pantry
@@ -55,4 +69,3 @@ class FN_Recipes::Recipe
     puts
   end
 
-  
