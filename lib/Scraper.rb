@@ -1,9 +1,9 @@
 class Scraper
 
     def self.scrape_fn_recipes
-        cupcake_recipes = Nokogiri::HTML(open("https://www.foodnetwork.com/"))
+        fn_recipes = Nokogiri::HTML(open("https://www.foodnetwork.com/"))
 
-        cupcake_recipes.css("").each do |recipe|
+        fn_recipes.css("").each do |recipe|
             new_recipe = Recipe.new
       new_recipe.name = recipe.css("").text
       new_recipe.description = recipe.css("").text
