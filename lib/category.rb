@@ -1,7 +1,3 @@
-
-require 'Nokogiri'
-require 'Open-uri'
-
 class Category
   @@all = []
   @@type = "category"
@@ -41,9 +37,10 @@ class Category
       name.slice!(" Recipes")
       url = row.css("a").attr("href").value
       self.new(name, url)
-    end
+  end
 
   def add_recipe(recipe)
     self.recipes << recipe
   end
+ end
 end
