@@ -1,7 +1,7 @@
 
 #the recipes being shown as a recipe - level 2 and child file
 
-class CupcakeRecipe
+class Recipe
   @@all = []
   @@type = "recipe"
 
@@ -21,7 +21,7 @@ class CupcakeRecipe
   
   def self.get_recipe(list)
     self.scrape_all_recipes(list)
-    puts "Here are all of the cupcakes recipes available to you:"
+    puts "Here are all of the recipes available to you:"
     recipe_index = Menu.display(self.type, recipes)
   end
     

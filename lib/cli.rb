@@ -5,7 +5,7 @@ require 'nokogiri'
 require 'pry'
 
 
-class Cupcakes::CLI
+class Recipes::CLI
     def.self.print_all(list)
     list.each_with_index do |item, index|
       puts "#{index + 1}. #{item.name}"
@@ -30,7 +30,7 @@ class Cupcakes::CLI
        index = input.to_i - 1 
        return index
       elseif input == "exit"
-        puts "Thank you for using the Cupcake Recipe Application. Goodbye!"
+        puts "Thank you for using the Food Network Recipe Application. Goodbye!"
         exit
       else 
         puts "Please check your input and try again, as your answer returned no value! #{input_prompt}"

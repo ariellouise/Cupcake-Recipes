@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "Cupcake_Recipes"
+require "fn_recipes"
 
 
 # (If you use this, don't forget to add pry to your Gemfile!)
