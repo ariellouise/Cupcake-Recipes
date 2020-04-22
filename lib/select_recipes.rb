@@ -56,3 +56,6 @@ class category
         self.recipes << recipe
     end
 end
+
+
+     
