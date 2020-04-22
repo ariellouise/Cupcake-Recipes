@@ -17,3 +17,42 @@ categories_list = categories_list[70, categories_list.length - 113]
 #puts categories_types.length
 #puts categories_list.to_s
 end
+
+class category
+    @@all = [ ]
+
+
+    attr_accessor :name
+
+    def initialize(name)
+        @name = name
+        self.class.all << self
+    end
+
+    def self.all
+        @@all
+    end
+
+    def self.get_list
+        self.scrape_category
+        category_index = Menu.display(self.all)
+        category = self.all[category_index]
+    end
+
+    def self.scrape_category
+        category_url = "https://www.foodnetwork.com/recipes/recipes-a-z/a"
+        parsed_categories = Nokogiri::HTML(categories_html)
+        puts parsed_categories.class
+        categories_list = parsed_categories.css("a").map(&:text) 
+        categories_list = categories_list[70, categories_list.length - 113]
+       
+        categories_list.each.with_index(1) do |value, index| 
+            puts "#{index}: #{value}" 
+
+        end
+    end
+
+    def add_recipe(recipe)
+        self.recipes << recipe
+    end
+end
