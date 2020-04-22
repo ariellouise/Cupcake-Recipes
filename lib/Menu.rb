@@ -1,3 +1,5 @@
+#done 
+
 Class Menu
   def self.print_all(list)
     list.each_with_index do |item, index|
