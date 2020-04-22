@@ -10,8 +10,12 @@ recipes_html = recipes_page.read
 
 parsed_recipes = Nokogiri::HTML(recipes_html)
 puts parsed_recipes.class
-recipes_types = parsed_recipes.css("h3#a.o-Capsule__a-Headline").map(&:text)
-#recipes_descriptions = parsed_recipes.css("a").map(&:text)
-puts recipes_types.to_s
-puts recipes_types.length
-#puts recipes_descriptions.to_s
+#recipes_types = parsed_recipes.css("h3#a.o-Capsule__a-Headline").map(&:text)
+recipes_descriptions = parsed_recipes.css("a").map(&:text)
+#puts recipes_types.to_s
+#puts recipes_types.length
+puts recipes_descriptions.to_s
+
+
+
+          
