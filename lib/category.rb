@@ -50,9 +50,9 @@ parsed_recipes = Nokogiri::HTML(recipes_html)
 
 puts parsed_recipes.class
 
-recipes_types = parsed_recipes.css("h3").map(&:text)
-#recipes_descriptions = parsed_recipes.css("h4").map(&:text)
+#recipes_types = parsed_recipes.css("h3").map(&:text)
+recipes_descriptions = parsed_recipes.css("h4").map(&:text)
 
-puts recipes_types.to_s
-puts recipes_types.length
-#puts recipes_descriptions.length 
+#puts recipes_types.to_s
+#puts recipes_types.length
+puts recipes_descriptions.length 
