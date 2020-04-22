@@ -1,7 +1,4 @@
-
-#the recipes being shown as a recipe - level 2 and child file
-
-class fn_Recipes::Recipe
+class FN_Recipes::Recipe
   attr_accessor :name, :category, :ingredients, :instructions
 
   @@recipes = []
@@ -10,11 +7,11 @@ class fn_Recipes::Recipe
 
     doc = Nokogiri::HTML(open("https://foodnetwork.com/recipes/"))
 
-     doc.css("").collect do |dish|
-       name = dish.css("").attribute("title").text
-       category = dish.css("").text
-       ingredients = dish.css("").text
-       instructions = dish.css("").text
+     doc.css("").collect do |recipe|
+       name = recipe.css("").attribute("title").text
+       category = recipe.css("").text
+       ingredients = recipe.css("").text
+       instructions = recipe.css("").text
        recipe = self.new(name, category, instructions, ingredients)
 
     end

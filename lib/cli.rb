@@ -143,7 +143,6 @@ def recipe_choice(input_1, input)
  if input != "exit" && @recipes_input[input.to_i-1]
    puts ""
    puts @recipes_input[input.to_i-1].name
-   puts "------------------------"
    puts ""
    puts "For recipe instructions please visit: #{@recipes_input[input.to_i-1].url}"
    puts ""
