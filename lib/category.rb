@@ -1,3 +1,6 @@
+#base_url = "https://www.foodnetwork.com"
+#recipes_url = "https://www.foodnetwork.com/recipes"
+
 class Category
     @@all = []
     @@type = "category"
@@ -28,5 +31,5 @@ class Category
     def self.scrape_all_categories
         main_url = "https://www.foodnetwork.com/"
         doc = Nokogiri::HTML(open(main_url))
-        
+
 end
