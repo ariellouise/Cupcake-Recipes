@@ -45,7 +45,7 @@ class category
         puts parsed_categories.class
         categories_list = parsed_categories.css("a").map(&:text) 
         categories_list = categories_list[70, categories_list.length - 113]
-       
+       # Try the ("a:contains(' ') again)
         categories_list.each.with_index(1) do |value, index| 
             puts "#{index}: #{value}" 
 
